@@ -23,7 +23,7 @@ namespace Kráterek
 
         public override string ToString()
         {
-            return $"{Nev}- Középpont: {X},{Y}, Sugár: {R}";
+            return $"A(z) {Nev} középpontja X={X} Y={Y} sugara R={R}.";
         }
     }
 }

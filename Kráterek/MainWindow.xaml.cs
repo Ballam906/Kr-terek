@@ -25,6 +25,14 @@ namespace Kráterek
         public MainWindow()
         {
             beolvas();
+
+            //var max = lista.Max(item => item.R, );
+            var max = lista[0].R;
+            foreach (var item in lista) {
+                if (item.R > max) { 
+                    max = item.R;
+                }
+            }
         }
 
         private void beolvas()
@@ -37,6 +45,27 @@ namespace Kráterek
                     var krater = new Krater(double.Parse(sor[0]), double.Parse(sor[1]), double.Parse(sor[2]), sor[3]);
                     lista.Add(krater);
                 }
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var index = -1;
+            foreach (var item in lista) {
+                if (item.Nev == Textbox1.Text) {
+                    index = lista.IndexOf(item);
+                    break;
+                }
+              
+            }
+
+            if (index >= 0)
+            {
+                Label1.Content=lista[index].ToString();
+            }
+            else
+            {
+                Label1.Content = "Nincs ilyen nevű kráter!";
             }
         }
     }

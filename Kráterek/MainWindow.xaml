@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TextBox x:Name="Textbox1" HorizontalAlignment="Left" Margin="56,56,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Keres" HorizontalAlignment="Left" Margin="207,59,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label x:Name="Label1" Content="Label" HorizontalAlignment="Left" Margin="280,56,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Label2" Content="4-es feladat" HorizontalAlignment="Left" Margin="72,143,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
