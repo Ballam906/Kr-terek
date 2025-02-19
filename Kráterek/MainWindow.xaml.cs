@@ -24,15 +24,25 @@ namespace Kráterek
         List<Krater> lista = new List<Krater>();
         public MainWindow()
         {
+            InitializeComponent();
             beolvas();
+
+
+
 
             //var max = lista.Max(item => item.R, );
             var max = lista[0].R;
+            var nev = lista[0].Nev;
             foreach (var item in lista) {
                 if (item.R > max) { 
                     max = item.R;
+                    nev = item.Nev;
                 }
+
             }
+            Label2.Content =  $"A legnagyobb kráter neve és sugara: {nev} , {max}";
+            
+
         }
 
         private void beolvas()
